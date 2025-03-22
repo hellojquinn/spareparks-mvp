@@ -10,8 +10,10 @@ body {
 .page-container {
     display: grid;
     grid-template-columns: 125px 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "nav-container location-header";
+    grid-template-rows: 250px 1fr;
+    grid-template-areas: 
+    "nav-container location-header"
+    "nav-container data-content";
 }
 .nav-container {
     display: flex;
@@ -105,4 +107,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.data-content {
+    border: 2px solid green;
+    min-width: 1015px;
+    max-width: 1015px;
+    min-height: 560px;
+    max-height: 560;
+    margin-left: 135px;
+    display: flex;
+    justify-content: center;
 }
