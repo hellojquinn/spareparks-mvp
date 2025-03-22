@@ -1,58 +1,108 @@
-* {
+*, *::before, *::after {
     box-sizing: border-box;
-    margin: 0;
 }
 
-.container {
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.page-container {
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 125px 1fr;
     grid-template-rows: auto 1fr;
-    grid-template-areas: 
-        "navbar location-header"
-        "navbar content";
+    grid-template-areas: "nav-container location-header";
+}
+.nav-container {
+    display: flex;
+    background-color: lightgrey;
+    max-width: 125px;
+    min-width: 125px;
     height: 100vh;
 }
 
-.navbar {
-    grid-area: navbar;
-    border: 3px green solid;
+
+.navbar, a {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+    text-align: left;
 }
 
-.location-header {
-    grid-area: location-header;
-    border: 3px green solid;
+.location-header{
+    background-color: lightgrey;
+    min-height: 150px;
+    max-height: 225px;
+    display: flex;
+    padding-left: 10px;
+}
+
+.location-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 15px;
+}
+#location-name {
+    border: 2px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#location-box {
+    display: flex;
+    gap: 20px;
+}
+#location-details {
+    border: 2px solid green;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    text-align: center;
+}
+
+#weather {
+    border: 2px solid green;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rt-traffic {
+    border: 2px solid green;
+    margin: 15px;
+    min-width: 400px;
+    max-width: 400px;
     min-height: 200px;
-}
-
-.content {
-    grid-area: content;
-    border: 3px green solid;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    padding: 10px;
+    max-height: 200px;
 }
 
 .key-data {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 10px;
-    border: 3px green solid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
 }
 
 .key-data-tile {
-    border: 3px green solid;
-    padding: 10px;
-}
-
-.big-data {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border: 3px green solid;
-    margin-top: 20px;
-}
-
-.big-data-tile {
-    border: 3px green solid;
-    padding: 10px;
+    border: 2px solid green;
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 75px;
+    max-height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
