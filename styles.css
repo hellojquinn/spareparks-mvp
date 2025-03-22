@@ -114,7 +114,7 @@ body {
     min-width: 1015px;
     max-width: 1015px;
     min-height: 560px;
-    max-height: 560;
+    max-height: 560px;
     margin-left: 135px;
     display: flex;
     justify-content: center;
