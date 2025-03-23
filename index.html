@@ -24,26 +24,134 @@
             <div class="location-info">
                 <div id="location-name"><h1>World Square</div>
                 <div id="location-box">
-                    <div id="location-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                    <div id="weather"></div>
-                </div>    
+                    <div id="location-details">
+                            <p> 644 George St, Sydney NSW 2000
+                                <br>
+                                Ticketless Parking
+                                <br>
+                                Operating 24 hours 7 Days
+                                <br>
+                                24/7 Customer Care: 1300 55 11 31
+                                <br>
+                                <p id="rates-panel" href="#">Click to View Location Rates</p>
+
+                                <div id="rates-info-panel" class="hidden">
+                                    <div class="panel-header">
+                                    <button id="close-panel">×</button>
+                                    </div> 
+                                    <h3 id="close-margin-fix">Online Rates:</h3>
+                                    <ul>
+                                        <li>$26 All Day Weekend Rate</li>
+                                        <li>$18 All Day Evening Rate</li>
+                                        <li>$18 All Day Weekend & Public Holiday Rate</li>
+                                    </ul>
+                                    <br>
+                                    <h3>Drive-up Rates:</h3>                                    
+                                    <!-- Flexbox container for tables -->
+                                    <div class="rate-tables">
+                                        <!-- Weekday Rates on the left -->
+                                        <div class="rate-column">
+                                            <h4>Weekday Rates (Monday to Friday)</h4>
+                                            <table>
+                                                <tr>
+                                                    <td>0 - 1 hrs</td>
+                                                    <td>$16</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1 - 2 hrs</td>
+                                                    <td>$32</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2 - 3 hrs</td>
+                                                    <td>$48</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3 - 4 hrs</td>
+                                                    <td>$63</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4 - 5 hrs</td>
+                                                    <td>$79</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5+ hrs</td>
+                                                    <td>$95</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                
+                                        <!-- Evening Rates on the right -->
+                                        <div class="rate-column">
+                                            <h4>Evening Rates (Monday to Friday)</h4>
+                                            <table>
+                                                <tr>
+                                                    <td>0 - 30 mins</td>
+                                                    <td>$7</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>30 - 60 mins</td>
+                                                    <td>$12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1 - 2 hrs</td>
+                                                    <td>$17</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2+ hrs</td>
+                                                    <td>$22</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div id="weekend-rates">
+                                    <h4>Overnight Rate (Monday to Friday)</h4>
+                                    <table>
+                                        <tr>
+                                            <td>$20</td>
+                                        </tr>
+                                    </table>
+                                    
+                                    <h4>Weekend Rates (Saturday, Sunday & Public Holidays)</h4>
+                                    <table>
+                                        <tr>
+                                            <td>0 - 1 hrs</td>
+                                            <td>$12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1 - 2 hrs</td>
+                                            <td>$17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2+ hrs</td>
+                                            <td>$22</td>
+                                        </tr>   
+                                    </table> 
+                                </div>
+                                </div>  <!--End Div for Hidden Panel -->
+                                </p>
+                        </div>    
+                    </div>    
             </div>
-                   
-                <div class="key-data">
-                    <div class="key-data-tile">Key Data 1</div>
-                    <div class="key-data-tile">Key Data 2</div>
-                    <div class="key-data-tile">Key Data 3</div>
-                    <div class="key-data-tile">Key Data 4</div>
-                </div>
- 
+            <div class="key-data">
+                <div class="key-data-tile">Key Data 1</div>
+                <div class="key-data-tile">Key Data 2</div>
+                <div class="key-data-tile">Key Data 3</div>
+                <div class="key-data-tile">Key Data 4</div>
+            </div>
+        
+            <div id="weather"></div>
             <div id="rt-traffic"></div>
+                   
+                
+            
 
         </header>
 
     
 <div class="data-content">
     <div class="data-tile">
-        <!-- <iframe title="SpareParks Designa World Square" width="1000" height="550" src="https://app.powerbi.com/view?r=eyJrIjoiMGFlMzM1MzMtMzJhOC00YTA1LWFhYzUtMGVkOGIxNjgzMjg2IiwidCI6IjUyYWNmMmQ1LTBkNzktNGUzNS1iNmE2LTk1NTgwZWRiMWU0YyJ9" frameborder="0" allowFullScreen="true"></iframe> -->
+        <iframe title="SpareParks Designa World Square" width="1000" height="550" src="https://app.powerbi.com/view?r=eyJrIjoiMGFlMzM1MzMtMzJhOC00YTA1LWFhYzUtMGVkOGIxNjgzMjg2IiwidCI6IjUyYWNmMmQ1LTBkNzktNGUzNS1iNmE2LTk1NTgwZWRiMWU0YyJ9" frameborder="0" allowFullScreen="true"></iframe>
       </div>
 
     </div>
@@ -51,9 +159,10 @@
 </div>  <!-- grid container end -->
 
     <!-- <footer>SpareParks &copy;</footer> -->
-<!-- <script src="weather.js"></script> -->
-<!-- <script src="map.js"></script> -->
-<!-- <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyColSxEts4CK-Bybi7ORWYQWCm0VFk8e14&callback=initMap"></script> -->
+    <script src="javascript.js"></script>
+<script src="weather.js"></script>
+<script src="map.js"></script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyColSxEts4CK-Bybi7ORWYQWCm0VFk8e14&callback=initMap"></script>
 
 </body>
 </html>
