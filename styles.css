@@ -24,16 +24,46 @@ body {
 }
 
 
-.navbar, a {
+.navbar {
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    padding-top: 10px;
-    padding-left: 10px;
-    font-size: 24px;
+    gap: 30px;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.navbar a {
+    align-self: flex-start;
+    font-size: 18px;
     color: black;
     text-decoration: none;
     text-align: left;
+    font-family: 'Figtree';
+    font-weight: bold;
+    position: relative;
+    transition: color 0.2s ease;
+
+}
+
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover {
+    transform: scale(1.03); 
+    cursor: pointer;
+}
+
+.navbar a:hover::after {
+    width: 100%;
 }
 
 .location-header{
@@ -55,6 +85,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Figtree';
 }
 
 #location-box {
@@ -77,9 +108,28 @@ body {
     min-height: 100px;
     max-height: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.weather-icon img {
+    width: 75px; /* Adjust the size as needed */
+    height: 75px;
+    margin: 0;
+    margin-top: -25px;
+    margin-bottom: -15px;
+  }
+  
+  .weather-description {
+    font-size: 12px;
+    margin: 0;
+  }
+  
+  .temperature {
+    font-size: 24px;
+    margin: 0;
+  }
 
 #rt-traffic {
     border: 2px solid green;
