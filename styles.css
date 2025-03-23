@@ -85,14 +85,34 @@ body {
 }
 
 #location-name {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     font-family: 'Figtree';
     font-size: 16px;
     padding: 0;
     margin-bottom: -25px;
-    color: #212320
+    position: relative;
+    color: #212320;
+    transition: color 0.2s ease;
+    align-self: flex-start;
+}
+
+#location-name::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 18px;
+    width: 0;
+    height: 2px;
+    background-color: #212320;
+    transition: width 0.3s ease;
+}
+
+#location-name:hover {
+    transform: scale(1.02); 
+    cursor: pointer;
+}
+
+#location-name:hover::after {
+    width: 100%;
 }
 
 #location-box {
@@ -206,7 +226,6 @@ body {
 }
 
 #weather {
-    border: 2px solid green;
     min-width: 100px;
     max-width: 100px;
     min-height: 100px;
@@ -215,7 +234,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: -25px;
+    margin-left: -35px;
     margin-top: 65px;
 }
 
@@ -240,7 +259,6 @@ body {
   }
 
 #rt-traffic {
-    border: 2px solid green;
     margin: 15px;
     min-width: 400px;
     max-width: 400px;
@@ -252,30 +270,44 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 20px;
+    gap: 5px;
     padding: 30px;
     margin-left: -30px;
     margin-right: 10px;
 }
 
 .key-data-tile {
-    border: 2px solid green;
-    min-width: 150px;
-    max-width: 150px;
-    min-height: 75px;
-    max-height: 75px;
+    min-width: 160px;
+    max-width: 160px;
+    min-height: 80px;
+    max-height: 80px;
+    font-size: 12px;
+    padding-left: 5px;
+    font-family: 'Figtree';
+    color: #212320;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
+.key-data-headline {
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.key-data-change {
+    margin-top: -2.5%;
+    font-size: 18px;
+    color: #73bbff;
+    font-weight: bolder;
+}
+
+
 .data-content {
-    border: 2px solid green;
     min-width: 1015px;
     max-width: 1015px;
     min-height: 560px;
     max-height: 560px;
-    margin-left: 200px;
+    margin-left: 125px;
     display: flex;
     justify-content: center;
 }
