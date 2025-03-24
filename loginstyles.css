@@ -19,7 +19,7 @@ body {
 }
 
 #background-box {
-    height: 350px;
+    height: 400px;
     width: 300px;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 8px;
@@ -51,6 +51,21 @@ body {
     margin-bottom: 10px;
 }
 
+#logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#brought-by {
+    color: #ccc;
+    font-family: 'Figtree';
+    font-size: 10px;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: -20px;
+}
+
 #pointparking-logo {
     background-image: url('./images/pointparking-logo.png');
     background-size: contain;
@@ -59,6 +74,8 @@ body {
     width: 250px;
     height: 100px;
     margin-top: 20px;
+    transform: scale(1.5);
+    display: block;
 }
 
 .form-group {
@@ -131,7 +148,7 @@ body {
     text-align: center;
     font-family: 'Figtree';
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: #ccc;
     font-size: 12px;
     width: auto;
     max-width: 600px;
@@ -141,9 +158,8 @@ body {
     margin-right: auto; 
 }
 
-/* Footer links */
 #footer a {
-    color: white;
+    color: #ccc;
     text-decoration: none;
     font-weight: bold;
 }
@@ -153,7 +169,7 @@ body {
 }
 
 #contact-us {
-    color: white;
+    color: #ccc;
     text-decoration: none;
     font-weight: bold;
 }
