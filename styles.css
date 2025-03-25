@@ -5,6 +5,8 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #212121;
+
 }
 
 .page-container {
@@ -189,12 +191,10 @@ body {
     transition: opacity 0.3s ease;
 }
 
-/* Show panel */
 #rates-info-panel.fade-in {
     opacity: 1;
 }
 
-/* Hide panel */
 #rates-info-panel.fade-out {
     opacity: 0;
 }
@@ -299,7 +299,7 @@ body {
     width: 550px;
     height: 300px;
     border-radius: 10px;
-    box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.5); /* More pronounced shadow */
+    box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.5); 
 }
 
 .key-data {
@@ -338,7 +338,7 @@ body {
 
 .data-tile {
     display: flex;
-    justify-content: center; /* Centers horizontally */
+    justify-content: center;
     align-items: center; 
     grid-column: 2; 
     margin: 25px;
@@ -352,7 +352,7 @@ body {
     width: 90%; 
     height: 100%; 
     grid-column: 2;   
-    margin-left: 50px;
+    
     margin-top: 80px;
     
 }
