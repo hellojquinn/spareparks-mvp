@@ -297,95 +297,115 @@ body {
 #rt-traffic {
     margin: 40px;
     width: 550px;
-    height: 300px;
+    height: 240px;
     border-radius: 10px;
     box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.5); 
 }
 
-.key-data {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 5px;
-    padding: 30px;
-    
-}
-
-.key-data-tile {
-    width: 160px;
-    height: 100px;
-    font-size: 12px;
-    padding-left: 5px;
-    font-family: 'Figtree';
-    color: white;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.3);
-    border-radius: 12px;
-    }
-
-.key-data-headline {
-    font-weight: bolder;
-    font-size: 18px;
-}
-
-.key-data-change {
-    margin-top: -2.5%;
-    font-size: 18px;
-    color: #73bbff;
-    font-weight: bolder;
-}
-
-.data-tile {
+.powerbi-container {
     display: flex;
     justify-content: center;
     align-items: center; 
     grid-column: 2; 
     margin: 25px;
-    border-radius: 12px;
+    margin-top: 60px;
 }
 
-.data-content {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    width: 90%; 
-    height: 100%; 
-    grid-column: 2;   
-    
-    margin-top: 80px;
-    
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: repeat(4, 1fr);
-    gap: 20px;
-    width: 90%; 
-    border: 2px solid #303030;
-    padding: 20px;
-    margin-bottom: 100px;
-    box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.3);
+#powerbi-frame {
+    width: 1600px;
+    height: 1248px;
+    clip-path: inset(0px 0px 265px 0px round 0%);
 
 }
 
-
-.grid-item {
-    background-color: #181A17;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.grid-item img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+@media (max-width: 2000px) {
+    #powerbi-frame {
+        width: 1600px;
+        height: 1248px;
+        clip-path: inset(0px 0px 265px 0px round 0%);
+    }
 }
 
 
+@media (max-width: 1900px) {
+    #powerbi-frame {
+        width: 1500px;
+        height: 1120px;
+        clip-path: inset(0px 0px 200px round 0px);
+    }
+}
+
+@media (max-width: 1800px) {
+    #powerbi-frame {
+        width: 1400px;
+        height: 1060px;
+        clip-path: inset(0px 0px 200px round 0px);
+    }
+}
+
+@media (max-width: 1700px) {
+    #powerbi-frame {
+        width: 1300px;
+        height: 1000px;
+        clip-path: inset(0px 0px 200px round 0px);
+    }
+}
+
+@media (max-width: 1600px) {
+    #powerbi-frame {
+        width: 1200px;
+        height: 935px;
+        clip-path: inset(0px 0px 200px round 0px);
+    }
+}
+
+@media (max-width: 1500px) {
+    #powerbi-frame {
+        width: 1100px;
+        height: 873px;
+        clip-path: inset(0px 0px 200px round 0px);
+    }
+}
+
+@media (max-width: 1400px) {
+    #powerbi-frame {
+        width: 1000px;
+        height: 815px;
+        clip-path: inset(0px 0px 200px round 0px);
+    }
+}
+
+@media (max-width: 1300px) {
+    #powerbi-frame {
+        width: 900px;
+        height: 753px;
+        clip-path: inset(0px 0px 200px round 0px);
+    }
+}
+
+@media (max-width: 1200px) {
+    #powerbi-frame {
+        width: 800px;
+        height: 692px;
+        clip-path: inset(0px 0px 200px round 0px);
+    }
+}
+
+@media (max-width: 1100px) {
+    #powerbi-frame {
+        width: 700px;
+        height: 630px;
+        clip-path: inset(0px 0px 200px round 0px);
+    }
+}
+
+@media (max-width: 1000px) {
+    #powerbi-frame {
+        width: 600px;
+        height: 567px;
+        clip-path: inset(0px 0px 200px round 0px);
+    }
+}
 
 table {
     border-spacing: 20px;

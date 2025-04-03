@@ -6,6 +6,7 @@
     <title>SpareParks MVP</title>
     <link rel="stylesheet" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Figtree' rel='stylesheet'>
+
 </head>
 <body>
 <div class="page-container">
@@ -16,14 +17,14 @@
                 <a>Settings</a>
                 <a>Support</a>
                 <a>Privacy</a>
-                <a href="login.html">Logout</a>
+                <a href="../login.html">Logout</a>
                 <br>
                 <a>Events:</a>
                 <div class="nav-ad">
-                    <img src="images/sydneycom.jpg"/>
+                    <img src="../images/sydneycom.jpg"/>
                 </div>
                 <div class="nav-ad">
-                    <img src="images/cityofsyd.jpg"/>
+                    <img src="../images/cityofsyd.jpg"/>
                 </div>
                 </div>
     </div>
@@ -143,44 +144,7 @@
                         </div>    
                     </div>    
             </div>
-            <div class="key-data">
-                <div class="key-data-tile">
-                    <p><span class="key-data-headline">System Revenue:</span>
-                        <br>
-                        Latest MTD: $56,714.00
-                        <br>
-                        Previous MTD: $52,235.00
-                   </p>
-                   <span class="key-data-change">+8.57%</span>
-                </div>
-                <div class="key-data-tile">
-                    <p><span class="key-data-headline">Traffic:</span>
-                        <br>
-                        Latest MTD: 9388
-                        <br>
-                        Previous MTD: 8291
-                    </p>
-                    <span class="key-data-change">+11.91%</span>
-                </div>
-                <div class="key-data-tile">
-                    <p><span class="key-data-headline">Validations:</span>
-                        <br>
-                        Latest MTD: $39,324.00
-                        <br>
-                        Previous MTD: $29,519.00
-                    </p>
-                    <span class="key-data-change">+33.22%</span>
-                </div>
-                <div class="key-data-tile">
-                    <p><span class="key-data-headline">ZipBy Discounts:</span> 
-                        <br>
-                        Latest MTD: $37,051.00
-                        <br>
-                        Previous MTD: $26,015.00 
-                    </p>
-                    <span class="key-data-change">+42.42%</span>
-                </div>
-            </div>
+            
             <div id="weather-traffic-wrapper">
             <div id="weather"></div>
             <div id="rt-traffic"></div>
@@ -189,65 +153,22 @@
             
 
         </header>
-
-<div class="data-content">
-    
-    <div class="grid-container">
-        <div class="grid-item">
-            <img src="images/data1.jpg"/>
+        <div class="powerbi-container">
+            <iframe id="powerbi-frame" title="SpareParks Designa World Square"
+                src="https://app.powerbi.com/view?r=eyJrIjoiMGFlMzM1MzMtMzJhOC00YTA1LWFhYzUtMGVkOGIxNjgzMjg2IiwidCI6IjUyYWNmMmQ1LTBkNzktNGUzNS1iNmE2LTk1NTgwZWRiMWU0YyJ9" 
+                frameborder="0" allowfullscreen="true">
+            </iframe>
         </div>
-        <div class="grid-item">
-            <img src="images/data2.jpg"/>
-        </div>
-        <div class="grid-item">
-            <img src="images/data3.jpg"/>
-        </div>
-        <div class="grid-item">
-            <img src="images/data4.jpg" />
-        </div>
-        <div class="grid-item">
-            <img src="images/data5.jpg"/>
-        </div>
-        <div class="grid-item">
-            <img src="images/data6.jpg"/>
-        </div>
-        <div class="grid-item">
-            <img src="images/data7.jpg"/>
-        </div>
-        <div class="grid-item">
-            <img src="images/data8.jpg"/>
-        </div>
-        <div class="grid-item">
-            <img src="images/data9.jpg"/>
-        </div>
-        <div class="grid-item">
-            <img src="images/data1.jpg"/>
-        </div>
-        <div class="grid-item">
-            <img src="images/data2.jpg"/>
-        </div>
-        <div class="grid-item">
-            <img src="images/data3.jpg"/>
-        </div>
-    </div>
-    
-
-    </div>
-   <div class="data-tile">
-      <iframe title="SpareParks Designa World Square" width="1000" height="550" src="https://app.powerbi.com/view?r=eyJrIjoiMGFlMzM1MzMtMzJhOC00YTA1LWFhYzUtMGVkOGIxNjgzMjg2IiwidCI6IjUyYWNmMmQ1LTBkNzktNGUzNS1iNmE2LTk1NTgwZWRiMWU0YyJ9" frameborder="0" allowFullScreen="true"></iframe>
-     </div>
-
+   
      <div id="footer">
         <p>&copy; 2025 SpareParks. All rights reserved.</p>
     </div>
 </div>  <!-- grid container end -->
 
 
-
 <script src="javascript.js"></script>
 <script src="weather.js"></script>
 <script src="map.js"></script>
 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyColSxEts4CK-Bybi7ORWYQWCm0VFk8e14&callback=initMap"></script>
-
 </body>
 </html>
