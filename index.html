@@ -14,8 +14,18 @@
     <div class="nav-container">
         <div class="navbar">
             <div id="title-wrapper">
-                
-            <div id="location-name"><h1>World Square</h1><div id="down-arrow"><i class="fa fa-caret-down"></i></div></div>
+                <div id="location-name">
+                    <h1>World Square</h1>
+                    <div id="down-arrow">
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+                <div id="dropdown-menu" class="dropdown-content">
+                    <a href="#" onclick="changeLocation('Location 1')">World Square</a>
+                    <a href="#" onclick="changeLocation('Location 2')">Queen Victoria Market</a>
+                    <a href="#" onclick="changeLocation('Location 3')">Burwood Plaza</a>
+                    <a href="#" onclick="changeLocation('Location 3')">Rouse Hill Town Centre</a>
+                </div>
             </div>
                 <div id="location-weather-wrapper">
                 <div id="location-details">
@@ -38,18 +48,16 @@
             <div id="location-image">
                 <img src="images/worldsquare.jpg"/>
             </div>
+           
             <div id="menu">
-                <a>Events:</a>
-                <div class="nav-ad">
-                    <img src="images/sydneycom.jpg"/>
-                    <img src="images/cityofsyd.jpg"/>
-                </div>
-            <a>Settings</a>
-            <a>Privacy</a>
-            <a>Support</a>
             <a href="login.html">Logout</a>
-        </div>
+            <a href="login.html">Support</a>
             </div>
+            <div id="footer">
+                <p>&copy; 2025 SpareParks. All rights reserved.</p>
+            </div>
+            </div>
+            
     </div>
         <div class="powerbi-container">
             <iframe id="powerbi-frame" title="SpareParks Designa World Square"
@@ -58,9 +66,7 @@
             </iframe>
         </div>
    
-     <div id="footer">
-        <p>&copy; 2025 SpareParks. All rights reserved.</p>
-    </div>
+     
 </div>  <!-- grid container end -->
 
 
