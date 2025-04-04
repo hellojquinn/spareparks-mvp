@@ -234,3 +234,9 @@ document.addEventListener('click', function (e) {
 #close-margin-fix {
     margin-top: -5%;
 }
+
+
+table {
+    border-spacing: 20px;
+    margin-top: -20px;
+}
