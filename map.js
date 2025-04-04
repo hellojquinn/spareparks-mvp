@@ -3,7 +3,7 @@ function initMap() {
 
   const map = new google.maps.Map(document.getElementById('rt-traffic'), {
     center: location,
-    zoom: 14,
+    zoom: 13,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
   });
 

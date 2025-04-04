@@ -6,127 +6,84 @@
     <title>SpareParks MVP</title>
     <link rel="stylesheet" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Figtree' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
 <div class="page-container">
     <div class="nav-container">
-            <div class="navbar">
-                <a>Home</a>
-                <a>Profile</a>
-                <a>Settings</a>
-                <a>Support</a>
-                <a>Privacy</a>
-                <a href="login.html">Logout</a>
-                <br>
-                <a>Events:</a>
-                <div class="nav-ad">
-                    <img src="images/sydneycom.jpg"/>
-                </div>
-                <div class="nav-ad">
-                    <img src="images/cityofsyd.jpg"/>
-                </div>
-                </div>
-    </div>
+        <div class="navbar">
+            <div id="title-wrapper">
+                
+            <div id="location-name"><h1>World Square</h1><div id="down-arrow"><i class="fa fa-caret-down"></i></div></div>
+            </div>
+                <div id="location-weather-wrapper">
+                <div id="location-details"><!-- LOCATION PANEL -->
+                    <p>644 George St, Sydney NSW 2000
+                        <br>
+                        Ticketless Parking
+                        <br>
+                        Operating 24 hours 7 Days
+                        <br>
+                        24/7 Customer Care: 1300 55 11 31
+                        <br>
+                        <p id="rates-panel" href="#">Click to View Location Rates</p>
     
-
-        <header class="location-header">
-            
-            <div class="location-info">
-                <div id="location-name"><h1>World Square</div>
-                <div id="location-box">
-                    <div id="location-details">
-                            <p>644 George St, Sydney NSW 2000
-                                <br>
-                                Ticketless Parking
-                                <br>
-                                Operating 24 hours 7 Days
-                                <br>
-                                24/7 Customer Care: 1300 55 11 31
-                                <br>
-                                <p id="rates-panel" href="#">Click to View Location Rates</p>
-
-                                <div id="rates-info-panel" class="hidden">
-                                    <div class="panel-header">
-                                    <button id="close-panel">×</button>
-                                    </div> 
-                                    <h2 id="close-margin-fix">Online Rates:</h2>
-                                    <ul>
-                                        <li>$26 All Day Weekend Rate</li>
-                                        <li>$18 All Day Evening Rate</li>
-                                        <li>$18 All Day Weekend & Public Holiday Rate</li>
-                                    </ul>
-                                    <br>
-                                    <h2>Drive-up Rates:</h2>                                    
-                                    <!-- Flexbox container for tables -->
-                                    <div class="rate-tables">
-                                        <!-- Weekday Rates on the left -->
-                                        <div class="rate-column">
-                                            <h2>Weekday Rates (Monday to Friday)</h2>
-                                            <table>
-                                                <tr>
-                                                    <td>0 - 1 hrs</td>
-                                                    <td>$16</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1 - 2 hrs</td>
-                                                    <td>$32</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2 - 3 hrs</td>
-                                                    <td>$48</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3 - 4 hrs</td>
-                                                    <td>$63</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4 - 5 hrs</td>
-                                                    <td>$79</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5+ hrs</td>
-                                                    <td>$95</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                
-                                        <!-- Evening Rates on the right -->
-                                        <div class="rate-column">
-                                            <h2>Evening Rates (Monday to Friday)</h2>
-                                            <table>
-                                                <tr>
-                                                    <td>0 - 30 mins</td>
-                                                    <td>$7</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>30 - 60 mins</td>
-                                                    <td>$12</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1 - 2 hrs</td>
-                                                    <td>$17</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2+ hrs</td>
-                                                    <td>$22</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div id="weekend-rates">
-                                    <h2>Overnight Rate (Monday to Friday)</h2>
-                                    <table>
-                                        <tr>
-                                            <td>$20</td>
-                                        </tr>
-                                    </table>
-                                    
-                                    <h2>Weekend Rates (Saturday, Sunday & Public Holidays)</h2>
+                        <div id="rates-info-panel" class="hidden">
+                            <div class="panel-header">
+                            <button id="close-panel">×</button>
+                            </div> 
+                            <h2 id="close-margin-fix">Online Rates:</h2>
+                            <ul>
+                                <li>$26 All Day Weekend Rate</li>
+                                <li>$18 All Day Evening Rate</li>
+                                <li>$18 All Day Weekend & Public Holiday Rate</li>
+                            </ul>
+                            <br>
+                            <h2>Drive-up Rates:</h2>                                    
+                            <!-- Flexbox container for tables -->
+                            <div class="rate-tables">
+                                <!-- Weekday Rates on the left -->
+                                <div class="rate-column">
+                                    <h2>Weekday Rates (Monday to Friday)</h2>
                                     <table>
                                         <tr>
                                             <td>0 - 1 hrs</td>
+                                            <td>$16</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1 - 2 hrs</td>
+                                            <td>$32</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2 - 3 hrs</td>
+                                            <td>$48</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3 - 4 hrs</td>
+                                            <td>$63</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4 - 5 hrs</td>
+                                            <td>$79</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5+ hrs</td>
+                                            <td>$95</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                        
+                                <!-- Evening Rates on the right -->
+                                <div class="rate-column">
+                                    <h2>Evening Rates (Monday to Friday)</h2>
+                                    <table>
+                                        <tr>
+                                            <td>0 - 30 mins</td>
+                                            <td>$7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>30 - 60 mins</td>
                                             <td>$12</td>
                                         </tr>
                                         <tr>
@@ -136,23 +93,57 @@
                                         <tr>
                                             <td>2+ hrs</td>
                                             <td>$22</td>
-                                        </tr>   
-                                    </table> 
+                                        </tr>
+                                    </table>
                                 </div>
-                                </div>  <!--End Div for Hidden Panel -->
-                                </p>
-                        </div>    
-                    </div>    
+                            </div>
+                            <br>
+                            <div id="weekend-rates">
+                            <h2>Overnight Rate (Monday to Friday)</h2>
+                            <table>
+                                <tr>
+                                    <td>$20</td>
+                                </tr>
+                            </table>
+                            
+                            <h2>Weekend Rates (Saturday, Sunday & Public Holidays)</h2>
+                            <table>
+                                <tr>
+                                    <td>0 - 1 hrs</td>
+                                    <td>$12</td>
+                                </tr>
+                                <tr>
+                                    <td>1 - 2 hrs</td>
+                                    <td>$17</td>
+                                </tr>
+                                <tr>
+                                    <td>2+ hrs</td>
+                                    <td>$22</td>
+                                </tr>   
+                            </table> 
+                        </div>
+                        </div>  <!--End Div for Hidden Panel -->
+                        </p>
+                </div>  
+                <div id="weather"></div>
             </div>
-            
-            <div id="weather-traffic-wrapper">
-            <div id="weather"></div>
-            <div id="rt-traffic"></div>
-        </div>
                 
-            
-
-        </header>
+                <div id="rt-traffic"></div>
+            <a>Profile</a>
+            <a>Settings</a>
+            <a>Support</a>
+            <a>Privacy</a>
+            <a href="login.html">Logout</a>
+            <br>
+            <a>Events:</a>
+            <div class="nav-ad">
+                <img src="images/sydneycom.jpg"/>
+            </div>
+            <div class="nav-ad">
+                <img src="images/cityofsyd.jpg"/>
+            </div>
+            </div>
+    </div>
         <div class="powerbi-container">
             <iframe id="powerbi-frame" title="SpareParks Designa World Square"
                 src="https://app.powerbi.com/view?r=eyJrIjoiMGFlMzM1MzMtMzJhOC00YTA1LWFhYzUtMGVkOGIxNjgzMjg2IiwidCI6IjUyYWNmMmQ1LTBkNzktNGUzNS1iNmE2LTk1NTgwZWRiMWU0YyJ9" 

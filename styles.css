@@ -11,13 +11,11 @@ body {
 
 .page-container {
     display: grid;
-    grid-template-columns: 180px 1fr;
-    grid-template-rows: 250px 1fr;
-    grid-template-areas: 
-    "nav-container location-header"
-    "nav-container data-content";
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 1fr;
     background-color: #212121;
 }
+
 .nav-container {
     display: flex;
     flex-direction: column;
@@ -25,18 +23,16 @@ body {
     height: 100vh;
     position: sticky;
     top: 0;
+    align-items: center;
 }
 
 
 .navbar {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding-top: 25px;
-    padding-left: 25px;
+    gap: 15px;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
-    border-right: 2px solid #303030;
 
 }
 
@@ -94,34 +90,30 @@ body {
 }
 
 
-.location-header{
-    background-color: #171717;
-    height: 250px;
+#title-wrapper {
     display: flex;
-    padding-left: 10px;
-    grid-column: 2;
-    letter-spacing: 0.5px;
-    border-bottom: 2px solid #303030;
-    
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding-left: 2px;
+    margin-bottom: -15px;
 }
 
-
-.location-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    padding-top: 15px;
+#down-arrow {
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 30px;
 }
+
 
 #location-name {
     font-family: 'Figtree';
     font-size: 16px;
     padding: 0;
-    margin-bottom: -25px;
-    position: relative;
+    margin-bottom: -20px;
     color: white;
     transition: color 0.2s ease;
-    align-self: flex-start;
+    display: flex;
 }
 
 #location-name::after {
@@ -148,21 +140,19 @@ body {
     display: flex;
     gap: 20px;
 }
+
 #location-details {
-    min-width: 240px;
-    max-width: 240px;
-    min-height: 100px;
-    max-height: 100px;
     text-align: left;
     font-size: 14px;
     font-family: 'Figtree';
-    padding-left: 2.5px;
     color: white;
 }
+
 
 #rates-panel {
     text-decoration: underline;
     cursor: pointer;
+    
 }
 
 #rates-panel:hover {
@@ -170,10 +160,11 @@ body {
 }
 
 .hidden {
-    display: none;
-}
+    opacity: 0;
+  }
 
 #rates-info-panel {
+    grid-template-columns: 2;
     position: fixed;
     top: 20%;
     left: 25%;
@@ -186,7 +177,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
     z-index: 9999;
-    
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -259,47 +249,45 @@ body {
     width: 100%;
 }
 
-#local-data {
-    color: white;
-    font-family: 'Figtree';
-}
-
 #weather {
-    margin-top: 25px;
-    width: 150px;
+    margin-top: -20px;
+    margin-left: 15px;
+    width: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    text-align: center;
 }
 
 .weather-icon img {
-    width: 100px;
-    height: 100px;
-    margin-top: 10px;
+    width: 75px;
+    height: 75px;
   }
   
   .weather-description {
-    margin-top: -20px;
+    margin-top: -15px;
     font-family: 'Figtree';
-    font-size: 18px;
+    font-size: 14px;
     color: white;
   }
   
   .temperature {
-    margin-top: -15px;
+    margin-top: -12px;
     font-family: 'Figtree';
-    font-size: 40px;
+    font-size: 28px;
     color: white;
   }
 
+  #location-weather-wrapper {
+    display: flex;
+  }
 
-#rt-traffic {
-    margin: 40px;
-    width: 350px;
-    height: 180px;
-    border-radius: 10px;
-    box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.5); 
+
+  #rt-traffic {
+    margin-top: -15px;
+    width: 365px;
+    height: 275px;
+    border-radius: 8px;
 }
 
 .powerbi-container {
