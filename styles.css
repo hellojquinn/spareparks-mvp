@@ -221,36 +221,20 @@ body {
 }
 
 #powerbi-frame {
-    width: 2300px;
-    height: 1675px;
+    width: 2100px;
+    height: 1550px;
     clip-path: inset(0px 0px 265px 0px round 0%);
 }
 
 @media (max-width: 2500px) {
     #powerbi-frame {
-        width: 2200px;
-        height: 1615px;
+        width: 2000px;
+        height: 1490px;
         clip-path: inset(0px 0px 265px 0px round 0%);
     }
 }
 
 @media (max-width: 2400px) {
-    #powerbi-frame {
-        width: 2100px;
-        height: 1555px;
-        clip-path: inset(0px 0px 265px 0px round 0%);
-    }
-}
-
-@media (max-width: 2300px) {
-    #powerbi-frame {
-        width: 2000px;
-        height: 1495px;
-        clip-path: inset(0px 0px 265px 0px round 0%);
-    }
-}
-
-@media (max-width: 2200px) {
     #powerbi-frame {
         width: 1900px;
         height: 1430px;
@@ -258,7 +242,7 @@ body {
     }
 }
 
-@media (max-width: 2100px) {
+@media (max-width: 2300px) {
     #powerbi-frame {
         width: 1800px;
         height: 1370px;
@@ -266,10 +250,26 @@ body {
     }
 }
 
-@media (max-width: 2000px) {
+@media (max-width: 2200px) {
     #powerbi-frame {
         width: 1700px;
-        height: 1310px;
+        height: 1305px;
+        clip-path: inset(0px 0px 265px 0px round 0%);
+    }
+}
+
+@media (max-width: 2100px) {
+    #powerbi-frame {
+        width: 1600px;
+        height: 1250px;
+        clip-path: inset(0px 0px 265px 0px round 0%);
+    }
+}
+
+@media (max-width: 2000px) {
+    #powerbi-frame {
+        width: 1500px;
+        height: 1185px;
         clip-path: inset(0px 0px 265px 0px round 0%);
     }
 }
@@ -277,29 +277,13 @@ body {
 
 @media (max-width: 1900px) {
     #powerbi-frame {
-        width: 1600px;
-        height: 1185px;
-        clip-path: inset(0px 0px 200px round 0px);
-    }
-}
-
-@media (max-width: 1800px) {
-    #powerbi-frame {
-        width: 1500px;
-        height: 1120px;
-        clip-path: inset(0px 0px 200px round 0px);
-    }
-}
-
-@media (max-width: 1700px) {
-    #powerbi-frame {
         width: 1400px;
         height: 1060px;
         clip-path: inset(0px 0px 200px round 0px);
     }
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1800px) {
     #powerbi-frame {
         width: 1300px;
         height: 1000px;
@@ -307,31 +291,31 @@ body {
     }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1700px) {
     #powerbi-frame {
         width: 1200px;
-        height: 938px;
+        height: 935px;
+        clip-path: inset(0px 0px 200px round 0px);
+    }
+}
+
+@media (max-width: 1600px) {
+    #powerbi-frame {
+        width: 1100px;
+        height: 876px;
+        clip-path: inset(0px 0px 200px round 0px);
+    }
+}
+
+@media (max-width: 1500px) {
+    #powerbi-frame {
+        width: 1000px;
+        height: 812px;
         clip-path: inset(0px 0px 200px round 0px);
     }
 }
 
 @media (max-width: 1400px) {
-    #powerbi-frame {
-        width: 1100px;
-        height: 877px;
-        clip-path: inset(0px 0px 200px round 0px);
-    }
-}
-
-@media (max-width: 1300px) {
-    #powerbi-frame {
-        width: 1000px;
-        height: 815px;
-        clip-path: inset(0px 0px 200px round 0px);
-    }
-}
-
-@media (max-width: 1200px) {
     #powerbi-frame {
         width: 900px;
         height: 753px;
@@ -339,7 +323,7 @@ body {
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
     #powerbi-frame {
         width: 800px;
         height: 690px;
@@ -347,10 +331,26 @@ body {
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     #powerbi-frame {
         width: 700px;
-        height: 630px;
+        height: 627px;
+        clip-path: inset(0px 0px 200px round 0px);
+    }
+}
+
+@media (max-width: 1100px) {
+    #powerbi-frame {
+        width: 600px;
+        height: 565px;
+        clip-path: inset(0px 0px 200px round 0px);
+    }
+}
+
+@media (max-width: 1000px) {
+    #powerbi-frame {
+        width: 500px;
+        height: 507px;
         clip-path: inset(0px 0px 200px round 0px);
     }
 }
