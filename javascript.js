@@ -1,22 +1,39 @@
+// Dropdown Menu JS
 document
   .getElementById('title-wrapper')
   .addEventListener('click', function (e) {
-    // Prevent event propagation to the document listener
     e.stopPropagation();
 
     var dropdown = document.getElementById('dropdown-menu');
 
-    // Toggle the dropdown visibility with fade effect
     dropdown.classList.toggle('show');
   });
 
-// Close the dropdown if clicking anywhere outside of the dropdown or button
 document.addEventListener('click', function (e) {
   var dropdown = document.getElementById('dropdown-menu');
   var titleWrapper = document.getElementById('title-wrapper');
 
-  // If the click target is outside of titleWrapper (where the dropdown button is)
   if (!titleWrapper.contains(e.target)) {
-    dropdown.classList.remove('show'); // Fade out and hide the dropdown
+    dropdown.classList.remove('show');
   }
 });
+
+// Location Title Change
+
+window.addEventListener('DOMContentLoaded', () => {});
+
+function changeLocation(locationName) {
+  const locationTitle = document.querySelector('#location-name h1');
+
+  // Fade out
+  locationTitle.style.transition = 'opacity 0.3s ease';
+  locationTitle.style.opacity = 0;
+
+  setTimeout(() => {
+    locationTitle.textContent = locationName;
+
+    locationTitle.style.opacity = 1;
+  }, 300);
+
+  document.getElementById('dropdown-menu').classList.remove('show');
+}
