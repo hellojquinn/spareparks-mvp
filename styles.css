@@ -142,10 +142,13 @@ body {
     transition: color 0.2s ease;
     display: flex;
     position: relative;
-    width: 200px; /* lock this width to the size of "World Square" */
+    width: 200px;
     transition: font-size 0.2s ease, opacity 0.3s ease;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 #location-name h1 {
@@ -186,6 +189,10 @@ body {
     font-family: 'Figtree';
     color: white;
     line-height: 1.5;
+    white-space: nowrap; /* Prevent the text from wrapping */
+    overflow: hidden; /* Hide any overflowed content */
+    width: 220px; /* Set a fixed width for the container */
+    text-overflow: clip;
 }
 
 #location-image {
@@ -232,8 +239,6 @@ body {
 
 #weather-traffic-wrapper {
     display: flex; 
-    justify-content: flex-end;
-    width: 100%;
 }
 
 #weather {
