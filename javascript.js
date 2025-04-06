@@ -43,11 +43,23 @@ const locationDetails = {
   },
 };
 
+const locationData = {
+  'World Square': { latitude: -33.8765, longitude: 151.20269 },
+  'Queen Victoria Market': { latitude: -37.80742, longitude: 144.95678 },
+  'Burwood Plaza': { latitude: -33.8752, longitude: 151.1041 },
+  'Rouse Hill Town Centre': { latitude: -33.6827, longitude: 150.9186 },
+};
+
 // Location Title Change
 window.addEventListener('DOMContentLoaded', () => {
   // Initial setup, you can load the default location data here
   const defaultLocation = 'World Square';
   updateLocationDetails(defaultLocation);
+  const defaultLocationCoords = locationData[defaultLocation];
+  updateWeather(
+    defaultLocationCoords.latitude,
+    defaultLocationCoords.longitude
+  );
 });
 
 function changeLocation(locationName) {
@@ -64,6 +76,8 @@ function changeLocation(locationName) {
 
     // Update the location details dynamically
     updateLocationDetails(locationName);
+    const selectedLocation = locationData[locationName];
+    updateWeather(selectedLocation.latitude, selectedLocation.longitude);
   }, 300);
 
   // Close the dropdown menu
