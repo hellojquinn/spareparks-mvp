@@ -64,23 +64,42 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function changeLocation(locationName) {
   const locationTitle = document.querySelector('#location-name h1');
+  const locationImage = document.querySelector('#location-image img');
 
-  // Fade out the title first
+  // Fade out title and image
   locationTitle.style.transition = 'opacity 0.3s ease';
   locationTitle.style.opacity = 0;
+  locationImage.style.transition = 'opacity 0.2s ease';
+  locationImage.style.opacity = 0;
 
-  // Wait for the fade-out effect, then update the content
   setTimeout(() => {
+    // Update title
     locationTitle.textContent = locationName;
     locationTitle.style.opacity = 1;
 
-    // Update the location details dynamically
+    // Update location details
     updateLocationDetails(locationName);
-    const selectedLocation = locationData[locationName];
-    updateWeather(selectedLocation.latitude, selectedLocation.longitude);
-  }, 300);
 
-  // Close the dropdown menu
+    // Update image with fade-in
+    locationImage.src = `images/${locationImages[locationName]}`;
+    locationImage.alt = locationName;
+    requestAnimationFrame(() => {
+      locationImage.style.opacity = 1;
+    });
+
+    // Update weather
+    const coords = locationData[locationName];
+    updateWeather(coords.latitude, coords.longitude);
+    updateMap(
+      coords.latitude,
+      coords.longitude,
+      locationDetails[locationName].address
+    );
+
+    updatePowerBI(locationName);
+  }, 200);
+
+  // Close dropdown menu
   document.getElementById('dropdown-menu').classList.remove('show');
 }
 
@@ -104,3 +123,36 @@ function updateLocationDetails(locationName) {
   // Replace the existing content with the new details
   locationDetailsElement.innerHTML = detailsContent;
 }
+
+function updatePowerBI(locationName) {
+  const iframe = document.getElementById('powerbi-frame');
+
+  iframe.style.transition = 'opacity 0.3s ease';
+  iframe.style.opacity = 0;
+
+  setTimeout(() => {
+    iframe.src = powerBIReports[locationName];
+    iframe.onload = () => {
+      iframe.style.opacity = 1;
+    };
+  }, 300);
+}
+
+// Images Object
+const locationImages = {
+  'World Square': 'worldsquare.jpg',
+  'Queen Victoria Market': 'queenvictoriamarket.jpg',
+  'Burwood Plaza': 'burwoodplaza.jpg',
+  'Rouse Hill Town Centre': 'rousehilltowncentre.jpg',
+};
+
+const powerBIReports = {
+  'World Square':
+    'https://app.powerbi.com/view?r=eyJrIjoiZmY3MjA5OGItNzY4ZC00YzVkLThlOTktOWU3NzdiYzVlMWZjIiwidCI6IjUyYWNmMmQ1LTBkNzktNGUzNS1iNmE2LTk1NTgwZWRiMWU0YyJ9',
+  'Queen Victoria Market':
+    'https://app.powerbi.com/view?r=eyJrIjoiNzFlZGEyMmMtODc2MC00NzE5LTg1YzEtZWVkNmI3NThiMTY4IiwidCI6IjUyYWNmMmQ1LTBkNzktNGUzNS1iNmE2LTk1NTgwZWRiMWU0YyJ9',
+  'Burwood Plaza':
+    'https://app.powerbi.com/view?r=eyJrIjoiMzA1ZTE5YWUtNmEzNy00ZWRiLTg3NWEtNzY1MGViYzUyZjA1IiwidCI6IjUyYWNmMmQ1LTBkNzktNGUzNS1iNmE2LTk1NTgwZWRiMWU0YyJ9&pageName=ReportSection120e5ff02127b59b9cd9',
+  'Rouse Hill Town Centre':
+    'https://app.powerbi.com/view?r=eyJrIjoiYTE0NzMyMDctM2JjNC00MTMzLWI5YjItMmEyYzMyZDVhOTQ3IiwidCI6IjUyYWNmMmQ1LTBkNzktNGUzNS1iNmE2LTk1NTgwZWRiMWU0YyJ9',
+};
