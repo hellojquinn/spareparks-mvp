@@ -5,7 +5,6 @@ document
     e.stopPropagation();
 
     var dropdown = document.getElementById('dropdown-menu');
-
     dropdown.classList.toggle('show');
   });
 
@@ -19,15 +18,14 @@ document.addEventListener('click', function (e) {
 });
 
 // Location Details Object
-
 const locationDetails = {
   'World Square': {
     address: '644 George St, Sydney NSW 2000',
     hours: 'Operating 24 hours 7 Days',
     customerCare: '24/7 Customer Care: 1300 55 11 31',
   },
-  'Queen Victoria Market': {
-    address: 'Queen St, Melbourne VIC 3000',
+  'St George Hospital': {
+    address: 'Gray St, Kogarah NSW 2217',
     hours: 'Operating 24 hours 7 Days',
     customerCare: '24/7 Customer Care: 1300 55 11 31',
   },
@@ -45,7 +43,7 @@ const locationDetails = {
 
 const locationData = {
   'World Square': { latitude: -33.8765, longitude: 151.20269 },
-  'Queen Victoria Market': { latitude: -37.80742, longitude: 144.95678 },
+  'St George Hospital': { latitude: -33.9667, longitude: 151.1403 },
   'Burwood Plaza': { latitude: -33.8752, longitude: 151.1041 },
   'Rouse Hill Town Centre': { latitude: -33.6827, longitude: 150.9186 },
 };
@@ -62,7 +60,10 @@ window.addEventListener('DOMContentLoaded', () => {
   );
 });
 
-function changeLocation(locationName) {
+// Location Title Change
+function changeLocation(locationName, event) {
+  event.stopPropagation(); // Prevent the click event from propagating to document
+
   const locationTitle = document.querySelector('#location-name h1');
   const locationImage = document.querySelector('#location-image img');
 
@@ -103,6 +104,14 @@ function changeLocation(locationName) {
   document.getElementById('dropdown-menu').classList.remove('show');
 }
 
+// Location link selection
+document.querySelectorAll('#dropdown-menu a').forEach((link) => {
+  link.addEventListener('click', function (event) {
+    const locationName = event.target.textContent;
+    changeLocation(locationName, event);
+  });
+});
+
 function updateLocationDetails(locationName) {
   // Retrieve the data for the selected location from the locationDetails object
   const details = locationDetails[locationName];
@@ -141,7 +150,7 @@ function updatePowerBI(locationName) {
 // Images Object
 const locationImages = {
   'World Square': 'worldsquare.jpg',
-  'Queen Victoria Market': 'queenvictoriamarket.jpg',
+  'St George Hospital': 'stgeorgehospital.jpg',
   'Burwood Plaza': 'burwoodplaza.jpg',
   'Rouse Hill Town Centre': 'rousehilltowncentre.jpg',
 };
@@ -149,8 +158,8 @@ const locationImages = {
 const powerBIReports = {
   'World Square':
     'https://app.powerbi.com/view?r=eyJrIjoiZmY3MjA5OGItNzY4ZC00YzVkLThlOTktOWU3NzdiYzVlMWZjIiwidCI6IjUyYWNmMmQ1LTBkNzktNGUzNS1iNmE2LTk1NTgwZWRiMWU0YyJ9',
-  'Queen Victoria Market':
-    'https://app.powerbi.com/view?r=eyJrIjoiNzFlZGEyMmMtODc2MC00NzE5LTg1YzEtZWVkNmI3NThiMTY4IiwidCI6IjUyYWNmMmQ1LTBkNzktNGUzNS1iNmE2LTk1NTgwZWRiMWU0YyJ9',
+  'St George Hospital':
+    'https://app.powerbi.com/view?r=eyJrIjoiODQ3Yzg5MjQtZGU5NS00OTRkLWFmZDAtOWIxNmFjZTQyNTIzIiwidCI6IjUyYWNmMmQ1LTBkNzktNGUzNS1iNmE2LTk1NTgwZWRiMWU0YyJ9',
   'Burwood Plaza':
     'https://app.powerbi.com/view?r=eyJrIjoiMzA1ZTE5YWUtNmEzNy00ZWRiLTg3NWEtNzY1MGViYzUyZjA1IiwidCI6IjUyYWNmMmQ1LTBkNzktNGUzNS1iNmE2LTk1NTgwZWRiMWU0YyJ9&pageName=ReportSection120e5ff02127b59b9cd9',
   'Rouse Hill Town Centre':

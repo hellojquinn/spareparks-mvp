@@ -19,7 +19,8 @@ body {
 }
 
 #background-box {
-    height: 400px;
+    margin-top: 25px;
+    height: auto;
     width: 300px;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 8px;
@@ -27,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
     opacity: 0;
     animation: fadeIn 1s forwards;
 }
@@ -49,6 +50,7 @@ body {
     width: 250px;
     height: 75px;
     margin-bottom: 10px;
+    margin-top: -25px;
 }
 
 #logo-container {
@@ -94,8 +96,7 @@ body {
     gap: 15px;
 }
 
-#username,
-#password {
+#email, #code-input-group {
     opacity: 0.9;
     font-size: 12px;
     font-family: 'Figtree';
@@ -108,14 +109,29 @@ body {
     background-color: rgba(255, 255, 255, 0.95);
 }
 
-#username:focus,
-#password:focus {
+#email, #code-input-group:focus {
     border-color: #00487f;
     box-shadow: 0 0 8px rgba(0, 72, 127, 0.6);
     background-color: rgba(255, 255, 255, 1);
 }
+#code-input-group {
+    width: 42%;
+}
 
-#submit-button {
+#code {
+    opacity: 0.9;
+    font-size: 12px;
+    font-family: 'Figtree';
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+
+}
+
+button {
     width: 90%;
     margin-top: 5px;
     background-color: #00487f;
@@ -128,18 +144,47 @@ body {
     text-decoration: none;
     border-radius: 4px;
     font-family: 'Figtree';
-    transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     text-align: center;
 }
 
-#submit-button:hover {
+button:hover {
     background-color: #005fa3;
     box-shadow: 0 0 8px rgba(0, 94, 163, 0.7);
 }
 
-#submit-button:active {
+button:active {
     transform: scale(0.97);
     background-color: #003660;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+#verify-btn {
+    width: 60%;
+    transition: width 0.3s ease;
+}
+
+#send-code-btn {
+    transition: width 0.3s ease;
+  }
+  
+  #send-code-btn.resend {
+    width: 60%;
+    transform: scale(0.8);  
+}
+
+#send-code-btn, #verify-btn {
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+  }
+  
+
+#email-status-message {
+    opacity: 0.9;
+    font-size: 12px;
+    font-family: 'Figtree';
+    color: white;
+    width: 70%;
 }
 
 #footer {

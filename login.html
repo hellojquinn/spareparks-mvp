@@ -9,44 +9,59 @@
 </head>
 <body>
 <div id="login-container">
-        <div id="background-box">
-            <div id="spareparks-logo"></div>
+    <div id="background-box">
+        <div id="spareparks-logo"></div>
 
-            <form id="login-form">
-                <div class="form-group">
-                    
-                    <input type="text" id="username" name="username" placeholder="Username">
-                </div>
-                <div class="form-group">
-                   
-                    <input type="password" id="password" name="password" placeholder="Password">
-                </div>
-                <a id="submit-button" href="index.html">Login</a>
-            
-            </form>
-            <div id="logo-container">
+        <form id="login-form">
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div id="email-status-message" style="display: none;">
+                A 4-digit code has been sent to your email. It will expire in 5 minutes.
+            </div>
+            <div class="form-group">
+                <button type="submit" id="send-code-btn">Login</button>
+            </div>
+            <div class="form-group" id="code-input-group" style="display: none;">
+                <input type="text" id="code" name="code" placeholder="Enter 4-digit code">
+            </div>
+            <button type="submit" id="verify-btn" style="display: none;">Verify</button>
+        </form>
+
+        <div id="logo-container">
             <p id="brought-by">Brought to you by:</p>
             <a id="pointparking-logo" href="https://pointparking.com.au/" target="_blank"></a>
         </div>
-        </div>
+    </div>
 </div>
 
 <div id="footer">
     <p>Photo by <a href="https://unsplash.com/@evannsimons?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Evan Simons</a> on <a href="https://unsplash.com/photos/person-driving-vehicle-TR3lC79qzw4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
-
     <p>&copy; 2025 SpareParks. All rights reserved.</p>
     <a href="javascript:void(0);" id="contact-us">Contact Us</a>
 
-<!-- The Popup -->
-<div id="contact-popup" class="popup">
-    <div class="popup-content">
-        <span id="close-btn" class="close-btn">&times;</span>
-        <h3>Contact SpareParks 24/7</h3>
-        <p><strong>Phone: </strong>1300 55 11 31</p>
-        <p><strong>Email: </strong> info@spareparks.com</p>
+    <!-- The Popup -->
+    <div id="contact-popup" class="popup">
+        <div class="popup-content">
+            <span id="close-btn" class="close-btn">&times;</span>
+            <h3>Contact SpareParks 24/7</h3>
+            <p><strong>Phone: </strong>1300 55 11 31</p>
+            <p><strong>Email: </strong> info@spareparks.com</p>
+        </div>
     </div>
 </div>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "NTMxGlWIEqdfZm71P",
+      });
+   })();
+</script>
+
+
 <script src="loginjavascript.js"></script>
+
 </body>
 </html>
